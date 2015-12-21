@@ -18,7 +18,6 @@ fun writeFiles(numberOfFiles: Int, numberOfLinesPerFile: Int, outputDir: String,
   for (i in 0..numberOfFiles-1) {
     val filepath = "${outputDir}${File.separator}${i}.csv";
     val writer = BufferedWriter(FileWriter(filepath, true), bufferSize)
-    writer.buffered()
     outStreams.put(i, writer)
   }
 
