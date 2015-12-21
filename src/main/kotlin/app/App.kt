@@ -38,15 +38,16 @@ fun writeFiles(numberOfFiles: Int, numberOfLinesPerFile: Int, outputDir: String,
 fun main(args: Array<String>){
   if(args.size < 5){
     print("""
-    Usage java -jar filewriter [numberOfFiles] [bufferSize(8192)] [numberOfLinesPerFile] [outputDirPath] [stringToWrite]
+    Usage java -jar filewriter [numberOfFiles] [numberOfLinesPerFile] [bufferSize(8192)][outputDirPath] [stringToWrite]
     """.trim())
     return
   }
   writeFiles(
     numberOfFiles = Integer.parseInt(args[0]),
     numberOfLinesPerFile = Integer.parseInt(args[1]),
-    outputDir = args[2],
-    outputStr = args[3]
+    bufferSize = Integer.parseInt(args[2]),
+    outputDir = args[3],
+    outputStr = args[4]
   )
 }
 
